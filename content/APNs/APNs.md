@@ -28,7 +28,7 @@ target-content-id| String | 推送content id
 
 #### alert 是String
 
-![](./img/alert_str.jpeg)
+<img src="./img/alert_str.jpeg" width="230" height="440" align="center" />
 
 ```
 {
@@ -45,7 +45,7 @@ target-content-id| String | 推送content id
 
 #### alert 是Dictionary
 
-![](./img/alert_dict.jpeg)
+<img src="./img/alert_dict.jpeg" width="230" height="440" align="center" />
 
 ```
 {
@@ -77,8 +77,9 @@ target-content-id| String | 推送content id
 // en
 "hello"="hello!";
 ```
-![](./img/apns_zh.jpeg)
-![](./img/apns_en.jpeg)
+
+<img src="./img/apns_zh.jpeg" width="230" height="440" align="center" />
+<img src="./img/apns_en.jpeg" width="230" height="440" align="center" />
 
 
 ```
@@ -108,9 +109,8 @@ target-content-id| String | 推送content id
 "body"="body!";
 
 ```
-
-![](./img/apns_info_zh.jpeg)
-![](./img/apns_info_en.jpeg)
+<img src="./img/apns_info_zh.jpeg" width="230" height="440" align="center" />
+<img src="./img/apns_info_en.jpeg" width="230" height="440" align="center" />
 
 ```
 {
@@ -144,7 +144,8 @@ AppData/Library/Sounds
 ```
 
 音频文件在App中存放路径：
-![sound_path.jpeg](./img/sound_url.jpeg)
+
+<img src="./img/sound_url.jpeg" align="center" />
 
 推送格式：
 
@@ -171,9 +172,8 @@ volume | Number | 音量 0~1
 这种证书需要单独申请并说明用途，推送的时候会有一个叹号，比如家里招贼了...
 
 #### thread-id，用于推送展示时分组。
-
-![](./img/thread-id_1.jpeg)
-![](./img/thread-id_2.jpeg)
+<img src="./img/thread-id_1.jpeg" width="230" height="440" align="center" />
+<img src="./img/thread-id_2.jpeg" width="230" height="440" align="center" />
 
 ```
 {
@@ -195,7 +195,7 @@ volume | Number | 音量 0~1
 
 选项：
 
-![](./img/category.jpeg)
+<img src="./img/category.jpeg" width="230" height="440" align="center" />
 
 
 ```
@@ -236,7 +236,7 @@ volume | Number | 音量 0~1
 
 输入：
 
-![](./img/apns_input.jpeg)
+<img src="./img/apns_input.jpeg" width="230" height="440" align="center" />
 
 ```
 {
@@ -291,7 +291,7 @@ volume | Number | 音量 0~1
 
 ios10特性，为App创建Extension target. 可以通过mutable-content唤醒，执行对应代码，唤醒时间最长为30s，主要作用是用于下载展示时需要显示的图片或对推送做客户端本地处理(如昵称适配，国家化)，之后在推送时显示出来。
 
-![](./img/apns_mutable_content.jpeg)
+<img src="./img/apns_mutable_content.jpeg" width="230" height="440" align="center" />
 
 ```
 // "mutable-content"值必须为1，否则无法拦截
@@ -341,13 +341,13 @@ ios12后，无法使用Extension__直接__播放声音和持续振动，微信�
 }
 ```
 
-![](./img/target-content-id.jpeg)
+<img src="./img/target-content-id.jpeg" align="center" />
 
 也可以用于通知的更新处理，
 
 如: xxx正在呼叫您，当对方挂断后，提示"您有一个未接电话"
 
-![](./img/call_coming.jpeg)
+<img src="./img/call_coming.jpeg" width="230" height="440" align="center" />
 
 ```
 // "target-content-id" 关键字，但可以定义为其他字段
@@ -362,8 +362,7 @@ ios12后，无法使用Extension__直接__播放声音和持续振动，微信�
 
 ```
 
-
-![](./img/call_end.jpeg)
+<img src="./img/call_end.jpeg" width="230" height="440" align="center" />
 
 ```
 // "need-delete-content-id"非关键字，可以定义为其他字段
