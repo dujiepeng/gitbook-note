@@ -450,3 +450,15 @@ __这个方式也可以用来做消息撤回，但contentHandler()执行时必�
 ### PushKit 
 
 可以直接唤醒App，一般和CallKit一起使用,当用户收到PushKit时，App已经被唤醒，用户可以自己实现本地通知和振动，可以做到__不停振动__。
+
+
+----
+参考:
+
+[Sending Notification Requests to APNs]
+
+[Generating a Remote Notification]
+
+[Sending Notification Requests to APNs]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns
+
+[Generating a Remote Notification]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification
