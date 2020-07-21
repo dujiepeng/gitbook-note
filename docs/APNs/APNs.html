@@ -1,0 +1,616 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>APNs 推送 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="APNs.html">
+            
+                <a href="APNs.html">
+            
+                    
+                    APNs 推送
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >APNs 推送</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="apns-&#x6574;&#x7406;">APNs &#x6574;&#x7406;</h1>
+<h2 id="&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x76F8;&#x5173;">&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x76F8;&#x5173;</h2>
+<p><a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns" target="_blank">https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns</a></p>
+<h2 id="&#x5BA2;&#x6237;&#x7AEF;&#x76F8;&#x5173;">&#x5BA2;&#x6237;&#x7AEF;&#x76F8;&#x5173;</h2>
+<h3 id="apns-&#x683C;&#x5F0F;&#x8BF4;&#x660E;">APNs &#x683C;&#x5F0F;&#x8BF4;&#x660E;</h3>
+<p><a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification" target="_blank">https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification</a></p>
+<p><img src="apns.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alert</td>
+<td>Dictionary (or String)</td>
+<td>&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td>badge</td>
+<td>Number</td>
+<td>&#x89D2;&#x6807;</td>
+</tr>
+<tr>
+<td>sound</td>
+<td>String</td>
+<td>&#x58F0;&#x97F3;</td>
+</tr>
+<tr>
+<td>sound</td>
+<td>Dictionary</td>
+<td>&#x7528;&#x4E8E;&#x7EC6;&#x5316;&#x58F0;&#x97F3;&#x63D0;&#x793A;</td>
+</tr>
+<tr>
+<td>thread-id</td>
+<td>String</td>
+<td>&#x63A8;&#x9001;&#x5C55;&#x793A;&#x5206;&#x7EC4;</td>
+</tr>
+<tr>
+<td>category</td>
+<td>String</td>
+<td>&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td>content-available</td>
+<td>Number</td>
+<td>&#x9759;&#x9ED8;&#x63A8;&#x9001;</td>
+</tr>
+<tr>
+<td>mutable-content</td>
+<td>Number</td>
+<td>&#x5524;&#x9192;Apns Service Extension,&#x503C;&#x4E3A; 0 or 1</td>
+</tr>
+<tr>
+<td>target-content-id</td>
+<td>String</td>
+<td>&#x63A8;&#x9001;content id</td>
+</tr>
+</tbody>
+</table>
+<h4 id="alert-&#x662F;string">alert &#x662F;String</h4>
+<p><img src="alert_str.PNG" width="130" height="240" align="left"></p>
+<pre><code>
+
+{
+    &quot;aps&quot;: {
+        &quot;alert&quot;: &quot;&#x6211;&#x662F;alert String&quot;,    // &#x663E;&#x793A;&#x5185;&#x5BB9;
+        &quot;badge&quot;: 11116,    // &#x89D2;&#x6807;
+        &quot;sound&quot;: &quot;default&quot;    // &#x58F0;&#x97F3;
+    }
+}
+</code></pre><h4 id="alert-&#x662F;dictionary">alert &#x662F;Dictionary</h4>
+<p><img src="alert_dict.PNG" width="130" height="240" align="left"></p>
+<pre><code>{
+    &quot;aps&quot;: {
+        &quot;alert&quot;: {
+            &quot;title&quot;:&quot;&#x6211;&#x662F;title&quot;,
+            &quot;subtitle&quot;:&quot;&#x6211;&#x662F;subtitle&quot;,
+            &quot;body&quot;:&quot;&#x6211;&#x662F;body&quot;
+        },
+        &quot;badge&quot;: 11116,
+        &quot;sound&quot;: &quot;default&quot;
+    }
+}
+</code></pre><h4 id="&#x56FD;&#x9645;&#x5316;">&#x56FD;&#x9645;&#x5316;</h4>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x4E2D;&#x914D;&#x7F6E;&#x8981;&#x5BF9;&#x5E94;&#x7684;&#x56FD;&#x9645;&#x5316;&#x6587;&#x4EF6;&#xFF0C;Apns&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5BF9;&#x5E94;&#x7684;key&#x63A8;&#x9001;</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;1&#xFF1A;</p>
+<pre><code>// zh
+&quot;hello&quot;=&quot;&#x4F60;&#x597D;!&quot;;
+
+// en
+&quot;hello&quot;=&quot;hello!&quot;;
+</code></pre><p><img src="apns_zh.PNG" width="130" height="240" align="left">
+<img src="apns_en.PNG" width="130" height="240" align="left"></p>
+<pre><code>{
+    &quot;aps&quot;: {
+        &quot;alert&quot;: {
+            &quot;loc-key&quot;:&quot;hello&quot;
+        },
+        &quot;badge&quot;: 1,
+        &quot;sound&quot;: &quot;default&quot;
+    }
+}
+</code></pre><p>&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;2&#xFF1A;</p>
+<pre><code>// zh
+&quot;title&quot;=&quot;&#x6807;&#x9898;!&quot;;
+&quot;subtitle&quot;=&quot;&#x5B50;&#x6807;&#x9898;!&quot;;
+&quot;body&quot;=&quot;&#x5185;&#x5BB9;!&quot;;
+
+// en
+&quot;title&quot;=&quot;title!&quot;;
+&quot;subtitle&quot;=&quot;subtitle!&quot;;
+&quot;body&quot;=&quot;body!&quot;;
+</code></pre><p><img src="apns_info_zh.PNG" width="130" height="240" align="left">
+<img src="apns_info_en.PNG" width="130" height="240" align="left"></p>
+<pre><code>
+{
+    &quot;aps&quot;: {
+        &quot;alert&quot;: {
+            &quot;title-loc-key&quot;:&quot;title&quot;,
+            &quot;subtitle-loc-key&quot;:&quot;subtitle&quot;,
+            &quot;loc-key&quot;:&quot;body&quot;
+        },
+        &quot;badge&quot;: 11116,
+        &quot;sound&quot;: &quot;default&quot;
+    }
+}
+</code></pre><h4 id="sound&#x662F;string">sound&#x662F;String</h4>
+<pre><code>// &#x652F;&#x6301;&#x683C;&#x5F0F;
+Linear PCM
+MA4 (IMA/ADPCM)
+&#xB5;Law
+aLaw
+
+// &#x5B58;&#x653E;&#x8DEF;&#x5F84;
+AppData/Library/Sounds
+</code></pre><p>&#x97F3;&#x9891;&#x6587;&#x4EF6;&#x5728;App&#x4E2D;&#x5B58;&#x653E;&#x8DEF;&#x5F84;&#xFF1A;
+<img src="sound_url.png" alt="sound_url.png"></p>
+<p>&#x63A8;&#x9001;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre><code>{
+    &quot;aps&quot;: {
+        &quot;alert&quot;: &quot;&#x6211;&#x662F;alert String&quot;,
+        &quot;badge&quot;: 11116,
+        &quot;sound&quot;: &quot;sub.caf&quot; // &#x58F0;&#x97F3;&#x6587;&#x4EF6;&#x540D;&#x79F0;
+    }
+}
+</code></pre><h4 id="sound&#x662F;dictionary">sound&#x662F;Dictionary</h4>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>critical</td>
+<td>Number</td>
+<td>&#x662F;&#x5426;&#x8BBE;&#x7F6E;&#x4E3A;&#x8B66;&#x544A; 0 or 1</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>&#x97F3;&#x9891;&#x6587;&#x4EF6;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>volume</td>
+<td>Number</td>
+<td>&#x97F3;&#x91CF; 0~1</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/" target="_blank">https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/</a>
+&#x8FD9;&#x79CD;&#x8BC1;&#x4E66;&#x9700;&#x8981;&#x5355;&#x72EC;&#x7533;&#x8BF7;&#x5E76;&#x8BF4;&#x660E;&#x7528;&#x9014;&#xFF0C;&#x63A8;&#x9001;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x53F9;&#x53F7;&#xFF0C;&#x6BD4;&#x5982;&#x5BB6;&#x91CC;&#x62DB;&#x8D3C;&#x4E86;...</p>
+<h4 id="thread-id&#xFF0C;&#x7528;&#x4E8E;&#x63A8;&#x9001;&#x5C55;&#x793A;&#x65F6;&#x5206;&#x7EC4;&#x3002;">thread-id&#xFF0C;&#x7528;&#x4E8E;&#x63A8;&#x9001;&#x5C55;&#x793A;&#x65F6;&#x5206;&#x7EC4;&#x3002;</h4>
+<p><img src="thread-id_1.PNG" width="130" height="240" align="left">
+<img src="thread-id_2.PNG" width="130" height="240" align="left"></p>
+<pre><code>{
+    &quot;aps&quot;: {
+        &quot;alert&quot;: {
+            &quot;title&quot;:&quot;&#x6D4B;&#x8BD5;&#x63A8;&#x9001;&#x5408;&#x5E76;&quot;,
+            &quot;subtitle&quot;:&quot;&#x6211;&#x7684;thread-id&#x662F;2&quot;,
+            &quot;body&quot;:&quot;&#x6211;&#x4F1A;&#x548C;&#x5176;&#x4ED6;thread-id&#x662F;2&#x7684;&#x63A8;&#x9001;&#x5408;&#x5E76;&#x5C55;&#x793A;&quot;
+        },
+        &quot;badge&quot;: 11116,
+        &quot;sound&quot;: &quot;default&quot;,
+        &quot;thread-id&quot;:&quot;2&quot;
+    }
+}
+</code></pre><h4 id="category-&#x7528;&#x4E8E;&#x5728;&#x4E0D;&#x6253;&#x5F00;app&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5904;&#x7406;">category &#x7528;&#x4E8E;&#x5728;&#x4E0D;&#x6253;&#x5F00;App&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5904;&#x7406;</h4>
+<p>&#x9009;&#x9879;&#xFF1A;</p>
+<p><img src="category.PNG" width="130" height="240" align="left"></p>
+<pre><code>{
+    &quot;aps&quot;: {
+        &quot;alert&quot;: &quot;&#x6211;&#x662F;alert String&quot;,
+        &quot;badge&quot;: 11116,
+        &quot;sound&quot;: &quot;default&quot;,
+        &quot;category&quot;:&quot;MEETING_INVITATION&quot;
+    }
+}
+</code></pre><p>&#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x63D0;&#x524D;&#x6CE8;&#x518C;&#x6837;&#x5F0F;&#xFF0C;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>- (void)updateNotificationCategory {
+
+    UNNotificationAction *action1 = [UNNotificationAction actionWithIdentifier:@&quot;ACCEPT_ACTION&quot;
+                                                                         title:@&quot;Accept&quot;
+                                                                       options:UNNotificationActionOptionAuthenticationRequired];
+
+    UNNotificationAction *action2 = [UNNotificationAction actionWithIdentifier:@&quot;DECLINE_ACTION&quot;
+                                                                         title:@&quot;Decline&quot;
+                                                                       options:UNNotificationActionOptionForeground];
+    //&#x7ED9;category&#x8BBE;&#x7F6E;action
+    UNNotificationCategory *category1 = [UNNotificationCategory categoryWithIdentifier:@&quot;MEETING_INVITATION&quot;
+                                                                               actions:@[action1, action2]
+                                                                     intentIdentifiers:@[]
+                                                                               options:UNNotificationCategoryOptionNone];
+    //&#x7ED9;&#x901A;&#x77E5;&#x5185;&#x5BB9;&#x8BBE;&#x7F6E;category
+
+    [UNUserNotificationCenter.currentNotificationCenter setNotificationCategories:[NSSet setWithObject:category1]];
+
+}
+</code></pre><p>&#x8F93;&#x5165;&#xFF1A;</p>
+<p><img src="apns_input.PNG" width="130" height="240" align="left"></p>
+<pre><code>{
+    &quot;aps&quot;: {
+        &quot;alert&quot;: &quot;&#x8981;&#x4E0D;&#x8981;&#x53BB;&#x5403;&#x996D;&#x554A;&#xFF1F;&quot;,
+        &quot;badge&quot;: 11116,
+        &quot;sound&quot;: &quot;default&quot;,
+        &quot;category&quot;:&quot;INPUT&quot;
+    }
+}
+</code></pre><p>&#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x63D0;&#x524D;&#x6CE8;&#x518C;&#x6837;&#x5F0F;&#xFF0C;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>- (void)updateNotificationNTextCategory {
+    UNTextInputNotificationAction *inputAction = [UNTextInputNotificationAction actionWithIdentifier:@&quot;action.input&quot;
+                                                                                               title:@&quot;&#x8F93;&#x5165;&quot;
+                                                                                             options:UNNotificationActionOptionForeground
+                                                                                textInputButtonTitle:@&quot;&#x53D1;&#x9001;&quot;
+                                                                                textInputPlaceholder:@&quot;&#x4F60;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x6587;&#x5B57;&quot;];
+    // &#x6CE8;&#x518C; category
+    UNNotificationCategory *category1 = [UNNotificationCategory categoryWithIdentifier:@&quot;INPUT&quot;
+                                                                               actions:@[inputAction]
+                                                                     intentIdentifiers:@[]
+                                                                               options:UNNotificationCategoryOptionCustomDismissAction];
+
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center setNotificationCategories:[NSSet setWithObject:category1]];
+}
+</code></pre><h4 id="content-available-&#x9759;&#x9ED8;&#x63A8;&#x9001;">content-available &#x9759;&#x9ED8;&#x63A8;&#x9001;</h4>
+<p>&#x6536;&#x5230;&#x540E;&#x4F1A;&#x88AB;&#x5524;&#x9192;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x8BA9;App&#x53EF;&#x4EE5;&#x5728;&#x540E;&#x53F0;&#x65F6;&#x51C6;&#x5907;&#x6570;&#x636E;&#xFF0C;&#x7528;&#x6237;&#x6253;&#x5F00;App&#x65F6;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C55;&#x793A;&#x4ECE;&#x800C;&#x63D0;&#x9AD8;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x3002;&#x4F7F;&#x7528;&#x7684;&#x524D;&#x63D0;&#x662F;app&#x5728;&#x540E;&#x53F0;(&#x4E0D;&#x8BBA;&#x662F;&#x5426;&#x5728;&#x8FD0;&#x884C;&#x6216;&#x8005;&#x88AB;&#x6302;&#x8D77;)&#xFF0C;&#x82F9;&#x679C;&#x5B98;&#x7F51;&#x5DF2;&#x7ECF;&#x4E0D;&#x518D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code>{
+   &quot;aps&quot; : {
+      &quot;content-available&quot; : 1
+   },
+}
+</code></pre><h4 id="mutable-content-&#x5524;&#x9192;apns-service-extension">mutable-content &#x5524;&#x9192;Apns Service Extension</h4>
+<p>ios10&#x7279;&#x6027;&#xFF0C;&#x4E3A;App&#x521B;&#x5EFA;Extension target. &#x53EF;&#x4EE5;&#x901A;&#x8FC7;mutable-content&#x5524;&#x9192;&#xFF0C;&#x6267;&#x884C;&#x5BF9;&#x5E94;&#x4EE3;&#x7801;&#xFF0C;&#x5524;&#x9192;&#x65F6;&#x95F4;&#x6700;&#x957F;&#x4E3A;30s&#xFF0C;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;&#x7528;&#x4E8E;&#x4E0B;&#x8F7D;&#x5C55;&#x793A;&#x65F6;&#x9700;&#x8981;&#x663E;&#x793A;&#x7684;&#x56FE;&#x7247;&#x6216;&#x5BF9;&#x63A8;&#x9001;&#x505A;&#x5BA2;&#x6237;&#x7AEF;&#x672C;&#x5730;&#x5904;&#x7406;(&#x5982;&#x6635;&#x79F0;&#x9002;&#x914D;&#xFF0C;&#x56FD;&#x5BB6;&#x5316;)&#xFF0C;&#x4E4B;&#x540E;&#x5728;&#x63A8;&#x9001;&#x65F6;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;</p>
+<p><img src="apns_mutable_content.PNG" width="130" height="240" align="left"></p>
+<pre><code>
+
+// &quot;mutable-content&quot;&#x503C;&#x5FC5;&#x987B;&#x4E3A;1&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x62E6;&#x622A;
+{
+    &quot;aps&quot;: {
+        &quot;alert&quot;:&quot;&#x6211;&#x662F;&#x6D88;&#x606F;&quot;,
+        &quot;badge&quot;:6,
+        &quot;mutable-content&quot;:1,
+        &quot;sound&quot;:&quot;default&quot;
+    }
+}
+</code></pre><p>&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;</p>
+<pre><code>- (void)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent * _Nonnull))contentHandler {
+    self.contentHandler = contentHandler;
+    self.bestAttemptContent = [request.content mutableCopy];
+
+    self.bestAttemptContent.title = @&quot;&#x66FF;&#x6362;&quot;;
+    self.bestAttemptContent.subtitle = @&quot;&#x66FF;&#x6362;&quot;;
+    self.bestAttemptContent.body = @&quot;&#x66FF;&#x6362;&quot;;
+    // music30.caf&#xFF0C; &#x81EA;&#x5B9A;&#x4E49;&#x94C3;&#x58F0;&#xFF0C;&#x94C3;&#x58F0;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x8DEF;&#x5F84;&#x4E3A; AppData/Library/Sounds&#xFF0C;&#x957F;&#x5EA6;&#x4E0D;&#x5F97;&#x8D85;&#x8FC7;30&#x79D2;
+    self.bestAttemptContent.sound = [UNNotificationSound soundNamed:@&quot;music30.caf&quot;];
+    self.contentHandler(self.bestAttemptContent);
+}
+</code></pre><p>ios12&#x540E;&#xFF0C;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;Extension<strong>&#x76F4;&#x63A5;</strong>&#x64AD;&#x653E;&#x58F0;&#x97F3;&#x548C;&#x6301;&#x7EED;&#x632F;&#x52A8;&#xFF0C;&#x5FAE;&#x4FE1;&#xFF0C;&#x652F;&#x4ED8;&#x5B9D;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x7684;&#x662F;push kit, push kit &#x540E;&#x6587;&#x4E2D;&#x8BF4;&#x660E;</p>
+<p><a href="https://zhuanlan.zhihu.com/p/102696231" target="_blank">https://zhuanlan.zhihu.com/p/102696231</a></p>
+<p><a href="https://support.rongcloud.cn/ks/ODcx" target="_blank">https://support.rongcloud.cn/ks/ODcx</a></p>
+<h4 id="target-content-id-unnotificationcontent&#x5BF9;&#x8C61;&#x7684;id&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;id&#x5904;&#x7406;&#x4E0D;&#x540C;&#x4E1A;&#x52A1;&#x5982;&#x70B9;&#x51FB;&#x8DF3;&#x8F6C;&#x5230;&#x67D0;&#x4E2A;&#x804A;&#x5929;&#x9875;&#x9762;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#xFF0C;&#x4E0D;&#x4E00;&#x5B9A;&#x975E;&#x8981;&#x4F7F;&#x7528;&#x5B57;&#x6BB5;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4ECE;content&#x4E2D;&#x53D6;&#x5230;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x7528;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x9700;&#x8981;&#x4ECE;content&#x7684;userinfo&#x91CC;&#x901A;&#x8FC7;&#x5B57;&#x5178;&#x53D6;&#x3002;">target-content-id UNNotificationContent&#x5BF9;&#x8C61;&#x7684;id&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;id&#x5904;&#x7406;&#x4E0D;&#x540C;&#x4E1A;&#x52A1;,&#x5982;&#x70B9;&#x51FB;&#x8DF3;&#x8F6C;&#x5230;&#x67D0;&#x4E2A;&#x804A;&#x5929;&#x9875;&#x9762;(&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#xFF0C;&#x4E0D;&#x4E00;&#x5B9A;&#x975E;&#x8981;&#x4F7F;&#x7528;&#x5B57;&#x6BB5;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4ECE;content&#x4E2D;&#x53D6;&#x5230;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x7528;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x9700;&#x8981;&#x4ECE;content&#x7684;userInfo&#x91CC;&#x901A;&#x8FC7;&#x5B57;&#x5178;&#x53D6;)&#x3002;</h4>
+<pre><code>// &#x63A8;&#x9001;&#x5185;&#x5BB9;
+{
+    &quot;aps&quot;: {
+        &quot;alert&quot;:&quot;&#x6211;&#x662F;&#x6D88;&#x606F;&quot;,
+        &quot;badge&quot;:6,
+        &quot;mutable-content&quot;:1,
+        &quot;target-content-id&quot;:&quot;id_1&quot;
+    }
+}
+</code></pre><p><img src="target-content-id.png"></p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x901A;&#x77E5;&#x7684;&#x66F4;&#x65B0;&#x5904;&#x7406;&#xFF0C;</p>
+<p>&#x5982;: xxx&#x6B63;&#x5728;&#x547C;&#x53EB;&#x60A8;&#xFF0C;&#x5F53;&#x5BF9;&#x65B9;&#x6302;&#x65AD;&#x540E;&#xFF0C;&#x63D0;&#x793A;&quot;&#x60A8;&#x6709;&#x4E00;&#x4E2A;&#x672A;&#x63A5;&#x7535;&#x8BDD;&quot;</p>
+<p><img src="call_coming.PNG" width="130" height="240" align="left"></p>
+<pre><code>
+// &quot;target-content-id&quot; &#x5173;&#x952E;&#x5B57;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E3A;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;
+{
+    &quot;aps&quot;: {
+        &quot;alert&quot;:&quot;du001&#x6B63;&#x5728;&#x9080;&#x8BF7;&#x60A8;&#x8FDB;&#x884C;&#x8BED;&#x97F3;&#x901A;&#x8BDD;&quot;,
+        &quot;badge&quot;:6,
+        &quot;mutable-content&quot;:1,
+        &quot;target-content-id&quot;:&quot;du001_call_coming&quot;
+    }
+}
+</code></pre><p><img src="call_end.PNG" width="130" height="240" align="left"></p>
+<pre><code>
+// &quot;need-delete-content-id&quot;&#x975E;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E3A;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;
+{
+    &quot;aps&quot;: {
+        &quot;alert&quot;:&quot;&#x60A8;&#x6709;&#x4E00;&#x4E2A;&#x672A;&#x63A5;&#x7535;&#x8BDD;&quot;,
+        &quot;badge&quot;:6,
+        &quot;mutable-content&quot;:1,
+        &quot;need-delete-content-id&quot;:&quot;du001_call_coming&quot;
+    }
+}
+</code></pre><p>ios &#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;</p>
+<pre><code>- (void)didReceiveNotificationRequest:(UNNotificationRequest *)request
+                   withContentHandler:(void (^)(UNNotificationContent * _Nonnull))contentHandler {
+    self.contentHandler = contentHandler;
+    self.bestAttemptContent = [request.content mutableCopy];
+
+    NSDictionary *aps = self.bestAttemptContent.userInfo[@&quot;aps&quot;];
+    NSString *contentId = aps[@&quot;need-delete-content-id&quot;];
+    __weak typeof(self) weakSelf = self;
+    [self removeSingleNotification:contentId callBack:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            weakSelf.contentHandler(weakSelf.bestAttemptContent);
+        });
+    }];
+}
+
+
+- (void)removeSingleNotification:(NSString *)contentId
+                        callBack:(void(^)(void))callBack{
+    [[UNUserNotificationCenter currentNotificationCenter] getDeliveredNotificationsWithCompletionHandler:^(NSArray&lt;UNNotification *&gt; * _Nonnull notifications) {
+        for (UNNotification *notification in notifications) {
+            UNNotificationRequest *request = notification.request;
+            UNNotificationContent *content = request.content;
+
+            if ([content.targetContentIdentifier isEqualToString:contentId]) {
+                [[UNUserNotificationCenter currentNotificationCenter] removeDeliveredNotificationsWithIdentifiers:@[request.identifier]];
+            }
+        }
+        callBack();
+    }];
+}
+</code></pre><p><strong>&#x8FD9;&#x4E2A;&#x65B9;&#x5F0F;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x505A;&#x6D88;&#x606F;&#x64A4;&#x56DE;&#xFF0C;&#x4F46;contentHandler()&#x6267;&#x884C;&#x65F6;&#x5FC5;&#x987B;&#x6709;&#x8FD4;&#x56DE;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5219;&#x8868;&#x793A;&#x672C;&#x6B21;&#x62E6;&#x622A;&#x4E0D;&#x88AB;&#x5904;&#x7406;&#xFF0C;&#x76F4;&#x63A5;&#x663E;&#x793A;apns&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x6240;&#x4EE5;&#x4E1A;&#x52A1;&#x4E0A;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x6837;&#x7684;&#x5904;&#x7406;&#x4E4B;&#x540E;&#x8FD4;&#x56DE;&quot;xxx&#x64A4;&#x56DE;&#x4E00;&#x6761;&#x6D88;&#x606F;&quot;&#x7684;&#x5B57;&#x6837;</strong></p>
+<pre><code>
+// &quot;msgId&quot;&#x975E;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E3A;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;
+{
+    &quot;aps&quot;: {
+        &quot;alert&quot;:&quot;du001&#x53D1;&#x6765;&#x4E00;&#x6761;&#x6D88;&#x606F;&quot;,
+        &quot;badge&quot;:6,
+        &quot;mutable-content&quot;:1,
+        &quot;msgId&quot;:&quot;140111111111&quot;
+    }
+}
+
+
+// &quot;recall_msgId&quot;&#x975E;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E3A;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;
+{
+    &quot;aps&quot;: {
+        &quot;alert&quot;:&quot;du001&#x64A4;&#x56DE;&#x4E00;&#x6761;&#x6D88;&#x606F;&quot;,
+        &quot;badge&quot;:6,
+        &quot;mutable-content&quot;:1,
+        &quot;recall_msgId&quot;:&quot;140111111111&quot;
+    }
+}
+</code></pre><h3 id="pushkit">PushKit</h3>
+<p>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5524;&#x9192;App&#xFF0C;&#x4E00;&#x822C;&#x548C;CallKit&#x4E00;&#x8D77;&#x4F7F;&#x7528;,&#x5F53;&#x7528;&#x6237;&#x6536;&#x5230;PushKit&#x65F6;&#xFF0C;App&#x5DF2;&#x7ECF;&#x88AB;&#x5524;&#x9192;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#x672C;&#x5730;&#x901A;&#x77E5;&#x548C;&#x632F;&#x52A8;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x5230;<strong>&#x4E0D;&#x505C;&#x632F;&#x52A8;</strong>&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"APNs 推送","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"APNs/APNs.md","mtime":"2020-07-13T10:10:58.390Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-21T07:18:03.326Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
