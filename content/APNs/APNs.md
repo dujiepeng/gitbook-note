@@ -326,7 +326,8 @@ ios10特性，为App创建Extension target. 可以通过mutable-content唤醒，
 ios12后，无法使用Extension__直接__播放声音和持续振动，微信，支付宝应该使用的是push kit, push kit 后文中说明
 
 
-#### target-content-id UNNotificationContent对象的id，可以根据不同的id处理不同业务,如点击跳转到某个聊天页面(这个字段也可以自己定义，不一定非要使用字段，这个是字段可以直接从content中取到，如果不用这个字段，需要从content的userInfo里通过字典取)。
+#### target-content-id 
+UNNotificationContent对象的id，可以根据不同的id处理不同业务,如点击跳转到某个聊天页面(这个字段也可以自己定义，不一定非要使用字段，这个是字段可以直接从content中取到，如果不用这个字段，需要从content的userInfo里通过字典取)。
 
 
 ```
