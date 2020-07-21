@@ -1,8 +1,7 @@
 # APNs 整理
 
 ## 服务器请求相关
- 
-<https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns>
+
 
 
 ## 客户端相关
@@ -11,10 +10,6 @@
 
 
 ### APNs 格式说明
-
-<https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification>
-
-
 
 
 ![](./img/apns.png)
